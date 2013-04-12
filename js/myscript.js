@@ -9,7 +9,7 @@ var changeFx = function(loan, percent, revenue){
     }
 };
 
-$("input").on("change", function(){ changeFx(parseInt($("#inputBorrow").val()), $("#slider").slider("value"), parseInt($("#inputRevenue").val()))});
+$("input").on("change", function(){ changeFx(parseInt($("#inputBorrow").val()), $("#slider").slider("value"), parseInt($("#inputRevenue").val()));});
 
 $(function () {
     $("#slider").slider({
