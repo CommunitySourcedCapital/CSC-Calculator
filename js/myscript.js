@@ -19,7 +19,7 @@ $(function () {
   $("#slider").slider({
     value: 2.5,
     min: .5,
-    max: 5,
+    max: 20,
     step: .5,
     slide: function (event, ui) {
       $( "#percent" ).text( ui.value + "%"); //Prints the percentage
