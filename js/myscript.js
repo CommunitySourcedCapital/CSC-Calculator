@@ -10,9 +10,9 @@ var on_input_change = function(loan, percent, revenue){
 };
 
 $("input").on("change", function(){
-  on_input_change(parseInt($("#inputBorrow").val()), 
+  on_input_change(parseInt($("#inputBorrow").val().replace(/,/g, "")), 
                   $("#slider").slider("value"), 
-                  parseInt($("#inputRevenue").val()));
+                  parseInt($("#inputRevenue").val().replace(/,/g, "")));
 });
 
 $(function () {
@@ -23,9 +23,9 @@ $(function () {
     step: .5,
     slide: function (event, ui) {
       $( "#percent" ).text( ui.value + "%"); //Prints the percentage
-      on_input_change(parseInt($("#inputBorrow").val()),
+      on_input_change(parseInt($("#inputBorrow").val().replace(/,/g, "")),
                       ui.value,
-                      parseInt($("#inputRevenue").val()));
+                      parseInt($("#inputRevenue").val().replace(/,/g, "")));
     }
   }); //sets up the slider
   $( "#percent" ).text( "" + $("#slider" ).slider("value") + "%");  //prints the initial percent
